@@ -3,9 +3,11 @@
  * angular-socket-io v0.7.0
  * (c) 2014 Brian Ford http://briantford.com
  * License: MIT
+ *
+ * Updates by Tomino2112
  */
 
-angular.module('btford.socket-io', []).
+angular.module('tomino2112.socket-io', []).
   provider('socketFactory', function () {
 
     'use strict';
@@ -94,7 +96,9 @@ angular.module('btford.socket-io', []).
               });
               socket.on(eventName, forwardBroadcast);
             });
-          }
+          },
+
+            socket: socket
         };
 
         return wrappedSocket;
